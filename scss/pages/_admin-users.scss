@@ -1,0 +1,94 @@
+.admin-user-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-form {
+    padding: 2rem;
+    background-color: #222222;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #00c2ff;
+    font-size: 1.5rem;
+    &__btn{
+        font-size: 1.2rem;
+        height: 35px;
+        width: 100%;
+        background-color: rgb(16, 16, 16);
+        border-color: $color-bg-primary;
+        border-radius: 5px;
+        box-shadow: none;
+        color: $color-text-light;
+        text-shadow: 0px 0px 5px rgba(0,194,255,1);
+        &:hover{ 
+            background-color: $color-bg-primary;
+            border-color: rgb(255, 255, 255);
+            color: black;
+        }
+    }
+}
+
+.input-user-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    &__label{
+        margin-bottom: .3rem;
+    }
+    &__input{
+        padding: .5rem;
+        font-size: 1.25rem;
+    }
+}
+
+.edit-btn{
+    background-color: rgb(0, 172, 11);
+    border-color: rgb(157, 235, 135);
+}
+
+.table-container{
+    width: 100vw;
+    overflow-x: scroll;
+}
+
+.table-user {
+    border-collapse: collapse;
+}
+
+.table-user{
+    &__title{
+        background-color: #00c2ff;
+        color: white;
+    }  
+
+}
+.table-user th, .table-user td {
+    border: 1px solid #00c2ff;
+    font-size: .75rem;
+    text-align: center;
+}
+
+.table-user tr td:not(:first-child) {
+    padding: .5rem;
+}
+.table-user tbody tr:nth-child(odd) {
+    background-color: rgba(252, 0, 0, 0.464);
+}
+
+
+@media screen and (min-width: 1000px){
+    .admin-user-container{
+        flex-direction: row;
+    }
+    .table-container{
+        overflow-x: auto;
+    }
+    .table-user tr th {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

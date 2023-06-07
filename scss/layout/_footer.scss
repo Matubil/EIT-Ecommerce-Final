@@ -1,0 +1,61 @@
+.footer{
+    display: flex;
+    background-color: $color-bg-secondary;
+    align-items: center;
+    flex-direction: column;
+    &__column{
+        padding: 1rem 1.5rem;
+        &:nth-child(2){            
+            border-top: 0.01rem solid white;
+            border-bottom: 0.01rem solid white;
+        }
+    }
+    &__contact-item{
+        list-style: none;
+    }
+    &__contact-link{
+        color: white;
+        padding: .25rem;        
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }      
+    &__contact-icon {
+        font-size: 1.75rem;
+        &--facebook {
+            color: #38529a;
+        }
+        &--instagram {
+            color: #f14d59;
+        }
+        &--linkedin {
+            color: #0077b6;
+        }
+    }
+    &__logo{
+        width: 3rem;
+    }
+    &__company-name{
+        font-family: 'Skranji', 'Inter', Arial, sans-serif;
+    }
+    &__copyright{
+        color: $color-text-light
+    }
+}
+
+@media screen and (min-width: 600px){
+    .footer{
+        flex-direction: row;
+        justify-content:space-around;
+        
+        &__column{
+            &:nth-child(2){  
+                border-top: none;
+                border-bottom: none;          
+                border-left: 0.01rem solid white;
+                border-right: 0.01rem solid white;
+                padding: 0 3rem;
+            }
+        }
+    }
+}

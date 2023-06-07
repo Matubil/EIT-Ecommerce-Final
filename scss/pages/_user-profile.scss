@@ -1,0 +1,34 @@
+
+.user-info-container{
+    // position: absolute;
+    // left: 50%;
+    margin-top: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    // width: 500px;
+    border-bottom: 1px solid #00c2ff;
+}
+
+.profile-btn{
+    margin-bottom: 1rem;
+}
+
+.table-product{
+    overflow-x: auto;
+}
+
+.user-order-table{
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 1600px){
+    .user-info-container{
+        flex-direction: row;
+    }
+    .profile-btn{
+        margin-bottom: 0;
+    }
+}

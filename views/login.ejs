@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Ingresar"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <h1 class="title">LOGIN</h1>
+        <div class="login-form">
+            <form class="login-form-container" id="loginForm">
+                <div class="login-form-container__group input-group-form">
+                    <label class="input-group-form__label" for="email">
+                        Email
+                    </label>
+                    <input class="input-group-form__input"  type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="login-form-container__group input-group-form">
+                    <label class="input-group-form__label"  for="">
+                        Contraseña
+                    </label>
+                    <input class="input-group-form__input" minlength="8" maxlength="30" type="password" id="password" name="password" placeholder="Password"  required><!--! IMPORTANTE recordar cambiar el type de text a password, y max y min length-->
+                </div>
+
+                <button type="submit" class="login-form-container__btn">Ingresar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- =================WSP LOGO=================  -->
+    <%- include('partials/wsp-logo') %>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+
+    <!-- =================AXIOS=================  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/header.js"></script>
+</body>
+</html>

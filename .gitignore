@@ -1,0 +1,4 @@
+/node_modules 
+# /config/secret.js
+#este deberia de ir descomentado, ya que guarda todo nuestras cosas que no deberian de verse
+.env  

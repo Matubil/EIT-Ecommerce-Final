@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head',{tabTitle: "Perfil" }) %>
+
+    <body>
+        <!-- =================HEADER=================  -->
+        <%- include('partials/header') %>
+
+            <!-- =================MAIN=================  -->
+
+            <main class="main">
+                <h1 class="title">
+                    PERFIL DEL USUARIO 
+                </h1>
+                <div class="user-info-container">
+                    <div class="user-info-container__child">
+                        <div class="name-container form-container">
+                            <label class="name-container__label" for="name">Nombre Completo</label>
+                            <input class="name-container__input input" type="text" name="name" id="name"
+                                placeholder="Nombre y Apellido" required>
+                        </div>
+
+                        <div class="mail-container form-container">
+                            <label class="mail-container__label" for="email">Email</label>
+                            <input class="mail-container__input input" type="email"
+                                name="mail" minlength="8" maxlength="45"
+                                pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?"
+                                id="email" placeholder="example@email.com" required>
+                        </div>
+
+                        <!-- <div class="password-container form-container">
+                            <label class="password-container__label" for="password1">Contraseña</label>
+                            <input class="password-container__input input" type="password"
+                                name="password1" id="password1" minlength="8" maxlength="20" required>
+                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} 
+                        </div> -->
+                    </div>
+                    <div class="user-info-container__child">
+                        <!-- <div class="reply-password-container form-container">
+                            <label class="reply-password-container__label" for="password2">Repetir Contraseña</label>
+                            <input class="reply-password-container__input input"  type="password"
+                                name="password2" id="password2" minlength="8" maxlength="20" required>
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}
+                        </div> -->
+    
+                        <div class="age-container form-container">
+                            <label class="age-container__label" for="age">Edad</label>
+                            <input class="age-container__input input"  type="number" name="age" id="age" min="12"
+                                max="120" required>
+                        </div>
+    
+                        <div class="born-container form-container">
+                            <label class="born-container__label" for="date">Fecha de Nacimiento</label>
+                            <input class="born-container__input input" type="date" name="date" id="date" required>
+                        </div>
+                    </div>
+                    <!-- <div class="user-info-container__child profile-btn">
+                        <div class="profile-btn__psw" id="btn-psw">
+                            
+                        </div>
+                    </div>                     -->
+                </div>
+                <div class="user-order-table">
+                        <table class="table-product">
+                            <thead class="table-product__header">
+                                <tr class="title-products">
+                                    <th class="title-products__items">User Id</th>
+                                    <th class="title-products__items">Email</th>
+                                    <th class="title-products__items">Order Id</th>
+                                    <th class="title-products__items">Descripcion</th>
+                                    <th class="title-products__items">Total</th>
+                                    <th class="title-products__items">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="order-profile-body">
+        
+                            </tbody>
+                        </table>
+                </div>
+            </main>
+
+            <!-- =================WSP LOGO=================  -->
+            <%- include('partials/wsp-logo') %>
+
+                <!-- =================FOOTER=================  -->
+                <%- include('partials/footer') %>
+
+                    <!--======================= AXIOS ======================= -->
+                    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+                    <!-- =================JAVASCRIPT=================  -->
+                    <script src="/js/url.js"></script>
+                    <script src="/js/alert.js"></script>
+                    <script src="/js/header.js"></script>
+                    <script src="/js/user-profile.js"></script>
+                    <!-- <script src="/js/general.js"></script> -->
+
+    </body>
+
+</html>

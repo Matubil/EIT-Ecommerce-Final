@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Adm Usuarios"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <h1 class="title">Admin User</h1>
+        <div class="admin-user-container">
+            <form id="add-product" class="user-form" onsubmit="addUser(event)"> 
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="nameLabel">Nombre Completo</label>
+                    <input class="input-user-box__input" type="text" name="fullname" id="nameLabel" value="prueba" required>
+                </div>
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="emailLabel">Email</label>
+                    <input class="input-user-box__input" type="email" name="email" id="emailLabel"  value="pruebita@gmail.com" required>
+                </div>
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="password1" >Contraseña</label>
+                    <input type="password" name="password1" id="password1" value="123456789" class="input-user-box__input" 
+                    
+                    min=3 max=30 required>
+                </div>
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="password2" >Repetir Contraseña</label>
+                    <input class="input-user-box__input" type="password" name="password2" id="password2"  
+                    class="admin-user-form__form-input" value="123456789"
+                    min=3 max=30  required>
+                </div>   
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="date">Fecha de Nacimiento</label>
+                    <input class="input-user-box__input" type="date" name="date" id="date" required>
+                </div>
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="age">Edad</label>
+                    <input class="input-user-box__input" type="number" name="age" id="age" value="26" min="12" max="120" required>
+                </div>
+                <div class="user-form__container input-user-box">
+                    <label class="input-user-box__label" for="rolLabel">Rol</label>
+                    <input class="input-user-box__input" type="text" name="role" value="USER_ROLE" id="rolLabel" required>
+                </div>
+                <button type="submit"  class="user-form__btn"  id="submit-btn" >Cargar usuario</button>
+            </form>
+            <div class="table-container">
+                <table class="table-user">
+                    <thead class="table-user__header">
+                        <tr class="title-users">
+                            <th class="title-users__items">Nombre</th>
+                            <th class="title-users__items">Email</th>
+                            <th class="title-users__items">Contraseña</th>
+                            <th class="title-users__items">Fecha de Nacimiento</th>
+                            <th class="title-users__items">Edad</th>
+                            <th class="title-users__items">Rol</th>
+                            <th class="title-users__items">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+
+    <!-- =================AXIOS=================  -->    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/isAdmin.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/admin-user.js"></script>    
+    <!-- <script src="/js/general.js"></script>  -->
+    <script src="/js/orders.js"></script> 
+</body>
+</html>

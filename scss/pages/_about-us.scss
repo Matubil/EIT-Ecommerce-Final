@@ -1,0 +1,89 @@
+.about-container {
+    &__description{
+        margin: 1rem;
+        text-align: center;
+    }
+    &__subtitle{
+        font-weight: 500;
+        margin: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid $color-bg-primary;
+        margin: 0.5rem;
+    }
+    &__images {
+        margin: 1.2rem auto;
+        display: flex;
+        width: 300px;
+        height: 215px;
+
+        .about-images {
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            object-position:center;
+            opacity: .5;
+            transition: .5 ease;
+            // overflow: hidden;
+            z-index: 0;
+            &:hover {
+                transition: all .5s ease-out;
+                // cursor:pointer;
+                width: 150px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .about-container {
+        &__images {
+            display: flex;
+            width: 500px;
+            height: 358px;
+
+            .about-images {
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .5;
+                transition: .5 ease;
+            }
+
+            .about-images:hover {
+                // cursor: crosshair;
+                width: 200px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about-container {
+        &__images {
+            display: flex;
+            width: 600px;
+            height: 430px;
+
+            .about-images {
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .5;
+                transition: .5 ease;
+            }
+
+            .about-images:hover {
+                cursor: crosshair;
+                width: 300px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        }
+    }
+}
+

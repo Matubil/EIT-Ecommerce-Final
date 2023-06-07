@@ -1,0 +1,13 @@
+.whatsapp-container {
+    margin: 15px;
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+        width: 4rem;
+    }
+}

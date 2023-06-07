@@ -1,0 +1,47 @@
+<header class="header">
+    <nav class="navbar">
+        <a href="/" class="navbar__nav-link">
+            <img class="navbar__logo" src="/assets/images/logos/viking logo cabeza.png" alt="Logo del ecommerce">
+        </a>
+        <div class="user-navbar">
+            <a href="order-detail"> 
+                <div class="user-navbar__cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="user-navbar__cart-badge" id="card-count">0</div>
+                </div>
+            </a>
+            <div class="user-navbar__user-avatar-container">                
+                <a href="user-profile"> 
+                <!-- TODO: add avatar of person or item-->
+
+                
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/100px-Default_pfp.svg.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
+                </a>
+            </div>
+        </div>
+
+        <input type="checkbox" class="navbar__menu-btn" id="menu-btn">
+
+        <label for="menu-btn" class="navbar__menu-label">
+            <span class="navbar__menu-icon"></span>
+        </label>
+
+        <ul class="navbar__nav-links-container" id="navbar-list">
+            <li class="navbar__nav-item">
+                <a href="/" class="navbar__nav-link">Inicio</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/contact" class="navbar__nav-link">Contacto</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/about-us" class="navbar__nav-link">Nosotros</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/register" class="navbar__nav-link">Registro</a>
+            </li>
+            <li class="navbar__nav-item" id="sign-in">
+                <a href="/login" class="navbar__nav-link">Login</a>
+            </li>
+        </ul>
+    </nav>
+</header>

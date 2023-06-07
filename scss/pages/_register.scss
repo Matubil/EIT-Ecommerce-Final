@@ -1,0 +1,95 @@
+.title{
+    margin: 0.5rem;  
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-bottom: 1px solid $color-bg-primary;
+    font-weight: 100;
+    color: $color-text-light;
+    padding: 1rem;
+}
+
+
+
+.section{
+    display: flex;
+    justify-content: center;
+    background: $color-bg-main;
+}
+
+
+.register{
+    margin: 5rem 0;
+    padding: 1.5rem;
+    background-color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 0.75);
+    &:hover{
+        text-shadow: 0px 0px 5px rgba(0,194,255,1);
+    }
+    &__button{
+        height: 35px;
+        width: 60px;
+        background-color: $color-bg-secondary;
+        border-color: $color-bg-primary;
+        border-radius: 5px;
+        box-shadow: none;
+        color: $color-text-light;
+        text-shadow: 0px 0px 5px rgba(0,194,255,1);
+        &:hover{ 
+            background-color: $color-bg-primary;
+            border-color: rgb(255, 255, 255);
+            color: black;
+        }
+    }
+}
+
+.form-container{
+    display: block;
+    width: 100%;
+    color: $color-bg-primary;
+}
+
+.input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    color: #0029af;
+    padding-bottom: .1rem;
+}
+
+.born-country-container__country{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+
+.sex-container, .therms-container{
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.therms-container{
+    margin-bottom: 1rem;
+}
+
+.sex-container__label{
+    padding: .5rem;
+}
+
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: $color-bg-primary;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px){
+    html{
+        font-size: 16px;
+    }
+}

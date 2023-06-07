@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Adm Productos"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <h1 class="title">Admin Product</h1>
+
+        <div class="admin-product-container">
+            <form id="add-product" class="product-form" onsubmit="addProduct(event)"> 
+                <div class="product-form__container input-product-box">
+                    <label class="input-product-box__label" for="nameLabel">Nombre del Producto</label>
+                    <input class="input-product-box__input" type="text" name="name" id="nameLabel" required>
+                </div>
+                <div class="product-form__container input-product-box">
+                    <label class="input-product-box__label" for="descLabel">Descripcion</label>
+                    <textarea class="input-product-box__description" name="description" id="descLabel" rows="5" required></textarea>
+                </div>
+                <div class="product-form__container input-product-box">
+                    <label class="input-product-box__label" for="priceLabel">Precio</label>
+                    <input class="input-product-box__input" type="number" name="price" id="priceLabel" step="0.01" min=0 required>
+                </div>
+                <div class="product-form__container input-product-box">
+                    <label class="input-product-box__label" for="imgLabel">Imagen</label>
+                    <input class="input-product-box__input" type="file" name="file" id="imgLabel" required>
+                </div>
+                <button type="submit" class="product-form__btn submit-btn" id="submit-btn">Cargar Producto</button>
+            </form>
+            <div class="table-container">
+                <table class="table-product">
+                    <thead class="table-product__header">
+                        <tr class="title-products">
+                            <th class="title-products__items">Imagen</th>
+                            <th class="title-products__items">Producto</th>
+                            <th class="title-products__items">Descripcion</th>
+                            <th class="title-products__items">Precio</th>
+                            <th class="title-products__items">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+
+    <!-- =================AXIOS=================  -->    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/admin-products.js"></script>
+    <script src="/js/isAdmin.js"></script>  
+</body>
+</html>

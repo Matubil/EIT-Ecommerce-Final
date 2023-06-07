@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Home"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <section class="section-cards">
+            <header class="section-cards__header">
+                <div class="section-cards__title-container">
+                    <h1 class="section-cards__title">
+                        Vikings Technology
+                    </h1>
+                    <p class="section-cards__subtitle">
+                        Juega con valentía y fuerza <span class="palabra-vikingo-eslogan">vikinga </span>con nuestras computadoras 
+                        y productos de alta calidad
+                    </p>
+                </div>
+                <div class="section-cards__products-search-container">
+                    <div class="product-search">
+                        <label for="" class="product-search__label">
+                            Buscar
+                        </label>
+                        <input type="text" class="product-search__input" id="search-input" onkeyup="searchProduct()">
+                        <button class="product-search__btn">Buscar</button>
+                    </div>
+
+                    <div class="section-cards__products-count" id="product-count">
+                        Se encontraron X productos
+                    </div>
+                </div>
+            </header>
+            <h1 class="section-cards__category">
+                CATEGORIA: OFERTAS
+            </h1>
+            <div class="cards-container" id="cards-container">
+            </div>
+        </section>
+    </main>
+
+    <!-- =================WSP LOGO=================  -->
+    <%- include('partials/wsp-logo') %>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+
+    <!--======================= AXIOS ======================= -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/general.js"></script>
+
+</body>
+</html>

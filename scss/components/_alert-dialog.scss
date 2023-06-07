@@ -1,0 +1,24 @@
+.alert-dialog {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-bg-primary;
+    padding: 2rem 3rem;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition:  visibility linear 0.5s, opacity 0.5s linear;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.alert-dialog.error{
+    background-color: red;
+}

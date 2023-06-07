@@ -1,0 +1,25 @@
+//muy importante el orden de los imports, ya que si pones uno encima del otro y depende las variables de un import de arriba no lo va a leer, ya que solamente lee variables de abajo para arriba, osea las de mas arriba no pueden depender de variables de import de abajo
+
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "components/card";
+@import "components/wsp-body-logo";
+@import "components/alert-dialog";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
+
+@import "pages/about-us";
+@import "pages/admin-product";
+@import "pages/admin-users";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/login";
+@import "pages/order-detail";
+@import "pages/product-detail";
+@import "pages/register";
+@import "pages/user-profile";

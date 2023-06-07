@@ -1,0 +1,124 @@
+ejecutar esto si no anda el token npm i jsonwebtoken  viene de la siguietne libreria (https://www.npmjs.com/package/jsonwebtoken)
+
+pagnia que usamos para comprobar los tokens https://jwt.io/
+
+instalamos npm i dontenv, esto nos va a permitir ver nuestros archivos .env
+
+npm i axios para hacer peticiones a nuestra db y que reemplaza a fetch que es nativa de js
+npm i cors clase 63 1:49:00 habla de cors,  es un mecanismo de seguridad que se utiliza en los navegadores web para permitir que los recursos de un sitio web se compartan con otros sitios web.
+CORS se utiliza para evitar que un sitio web malintencionado acceda a los recursos de otro sitio web sin permiso.
+
+npm i multer es un middleware de manejo de archivos para aplicaciones Node.js. Se utiliza principalmente para el manejo de la carga de archivos en formularios HTML o solicitudes HTTP en servidores Node.js.
+npm i fs clase 65 min 1:11:00 es el file storage de node
+npm i uuid clase 65 min 1:48:00 se usa para ponerle un id al archivo
+npm i ejs clase 66 min 21 habla de las plantillas para js
+
+
+como crear un snippet (Osea a traves de una expresion que escriba parte del codigo)
+presionar ctrl+shift+p, escribir snippet,configure user snippet, despues elegir javascript.json y ahi colocar por ejemplo el siguiente codigo	// Snippet para trabajar respuestas en el servidor
+	"expressTryCatch": {
+		"prefix": "ExpressCatch",
+		"body": [
+			"try {",
+			"	return res.send(`DELETE USER`);",
+			"} catch(error) {",
+			"	console.log(error);",
+			"	return responseCreator(res, 500, $1, $2)",
+			"}"
+		]
+	}
+no importa si tira error, es porque tiene espacio y lo toma como que esta mal
+
+
+CLase 66 min 1:40 empieza a hablar de la relacion con el backend
+
+
+
+Para cambiar el live sass compiler: 
+1. Ir a engranaje --> settings --> extensions --> Live sass Compiler --> Live sass Compiler : Settings Formats
+ ------------------------------------------------------------------------
+ -----------------PARA EL ECOMMERCE SIN BACK-----------------------------
+ ------------------------------------------------------------------------
+
+
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "liveSassCompile.settings.formats": [
+    
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "sass.andStared": [
+
+        "active",
+        "focus",
+        "hover",
+        "nth-child"
+    ],
+    "editor.fontFamily": "'JetBrains Mono', Consolas",
+    "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
+    "liveSassCompile.settings.includeItems": [
+
+    ],
+    "liveSassCompile.settings.rootIsWorkspace": null,
+    "liveSassCompile.settings.showAnnouncements": null,
+    "liveSassCompile.settings.useNewCompiler": false,
+    "terminal.integrated.env.windows": {},
+    "liveServer.settings.donotShowInfoMsg": true,
+    "easycode.userEmail": "matubil@gmail.com",
+    "window.zoomLevel": -1
+}
+
+------------------------------------------------------------------------
+-----------------PARA EL ECOMMERCE SIN BACK-----------------------------
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+------------------PARA EL ECOMMERCE CON BACK----------------------------
+------------------------------------------------------------------------
+
+ {
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "liveSassCompile.settings.formats": [
+
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/public/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "sass.andStared": [
+
+        "active",
+        "focus",
+        "hover",
+        "nth-child"
+    ],
+    "editor.fontFamily": "'JetBrains Mono', Consolas",
+    "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
+    "liveSassCompile.settings.includeItems": [
+
+    ],
+    "liveSassCompile.settings.rootIsWorkspace": null,
+    "liveSassCompile.settings.showAnnouncements": null,
+    "liveSassCompile.settings.useNewCompiler": false,
+    "terminal.integrated.env.windows": {},
+    "liveServer.settings.donotShowInfoMsg": true,
+    "easycode.userEmail": "matubil@gmail.com",
+    "window.zoomLevel": -1
+}

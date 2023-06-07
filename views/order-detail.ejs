@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Detalle de Orden"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <section class="section-cards">
+    
+            <div class="section-cards__category">
+                <h1 id="title-h1">
+                    TU ORDEN DE COMPRA
+                </h1>
+            </div>
+    
+            <div class="table-order-container">
+                <table class="table-product">
+                    <tbody id="cart-detail-table">
+
+                    </tbody>
+                </table>
+                <button class="table-order-container__finalize-purchase" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================WSP LOGO=================  -->
+    <%- include('partials/wsp-logo') %>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+    
+    <!--======================= AXIOS ======================= -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/orders.js"></script>
+</body>
+</html>

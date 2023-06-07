@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head',{tabTitle: "Contact"}) %>
+<body>
+    <!-- =================HEADER=================  -->
+    <%- include('partials/header') %>
+
+    <!-- =================MAIN=================  -->
+
+    <main class="main">
+        <section class="section-contact">
+            <div class="contact-container">
+                <div class="contact-container__item">
+                    <h1 class="contact-title">Contáctanos!</h1>
+                    <form class="form-contact">
+                        <div class="name-container form-contact__container">
+                            <label class="name-container__label" for="name">Nombre Completo</label>
+                            <input class="name-container__input input" type="text" name="name" id="name"
+                                placeholder="Nombre y Apellido" required>
+                        </div>
+
+                        <div class="mail-container form-contact__container">
+                            <label class="mail-container__label" for="email">Email</label>
+                            <input class="mail-container__input input" type="email" name="mail" minlength="8"
+                                maxlength="45"
+                                pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?"
+                                id="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="consult-container form-contact__container">
+                            <label for="consult-container__label">Consulta</label> <br>
+                            <textarea class="consult-container__text-area" name="consults" cols="40"
+                                rows="5"></textarea>
+                        </div>
+                        <button class="contact-btn" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="contact-container__item">
+                    <h1 class="contact-title">Visítanos!</h1>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d817.0589518863014!2d-58.05507979725362!3d-35.00080181705491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1674578060757!5m2!1ses-419!2sar"
+                        class="input-map" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================WSP LOGO=================  -->
+    <%- include('partials/wsp-logo') %>
+
+    <!-- =================FOOTER=================  -->
+    <%- include('partials/footer') %>
+
+    <!-- =================JAVASCRIPT=================  -->
+    <script src="/js/url.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/general.js"></script>
+    <script src="/js/orders.js"></script>
+</body>
+</html>
