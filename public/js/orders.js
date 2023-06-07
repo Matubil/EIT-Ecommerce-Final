@@ -259,6 +259,7 @@ async function finalizarCompra() {
     console.log(orden.status)
     console.log(orden.updateAt)
 
+
     await axios.post(`${URL}/orders`, orden);
 
     if (Order.length === 0) {
@@ -268,8 +269,9 @@ async function finalizarCompra() {
       Order = []; // Vacía el carrito
       renderOrder(); // Renderizar la orden antes de eliminar el contenido del carrito
       showAlert('Compra Finalizada', 'exito');
-      window.location.replace("/order-detail");
-
+      setTimeout(() => {
+        window.location.replace("/user-profile");
+      }, 1500)
     }
 
   } catch (error) {
