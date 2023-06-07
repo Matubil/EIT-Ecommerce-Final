@@ -102,7 +102,7 @@ async function addProduct(evt) {
                     Authorization: token
                 }
             })
-            if (!response) {
+            if (!data) {
                 showAlert('No se pudo agregar el producto', 'error')
                 cargarProductos()
                 return
