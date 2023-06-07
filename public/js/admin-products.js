@@ -34,8 +34,8 @@ function renderizarTabla(arrayProducts) {
         return
     }
     arrayProducts.forEach((producto, index) => {
-        let imageSrc = producto.image ? `/upload/product/${producto.image}` : '/public/assets/images/funciones-pagina/not-found.webp'; //clase 66 min 1:55:30
-
+        let imageSrc = producto.image ? `/upload/product/${producto.image}` : '/public/assets/images/funciones-pagina/not-found.webp';
+        
         const tableRow = `
                             <tr class="product">
                                 <td class="product__img-cell">

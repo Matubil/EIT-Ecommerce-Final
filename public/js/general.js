@@ -78,10 +78,9 @@ async function searchProduct() {
     const respuesta = await axios.get(`${URL}/products`)
     var products = respuesta.data.products
 
-    // console.log(respuesta.data.products)
 
     var searchTerm = document.getElementById('search-input').value;
-    // var products = JSON.parse(localStorage.getItem('Products'));
+
     var foundProducts = products.filter(function (product) {
         return product.name.toLowerCase().includes(searchTerm.toLowerCase());
     });

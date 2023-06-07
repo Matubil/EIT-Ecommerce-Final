@@ -182,8 +182,7 @@ async function editOrder(id){
     try {
         // if (confirm(`¿Está seguro que desea borrar el producto ${productName}?`)) {
         if (confirm(`¿Está seguro que desea actualizar la contraseña?`)) {
-            console.log(password1)
-            console.log(password2)
+
             if (password1 !== password2) {
                 showAlert(`El password no coincide`, 'warning')
                 return
