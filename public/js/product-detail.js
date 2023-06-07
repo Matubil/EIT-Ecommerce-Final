@@ -98,7 +98,6 @@ renderizarDetail()
 
 let input = document.getElementById("quantity-input");
 
-console.log(input)
 let currentValue = 1;
 
 function increaseInput() {

@@ -35,7 +35,7 @@ function renderizarTabla(arrayProducts) {
     }
     arrayProducts.forEach((producto, index) => {
         let imageSrc = producto.image ? `/upload/product/${producto.image}` : '/public/assets/images/funciones-pagina/not-found.webp';
-        
+
         const tableRow = `
                             <tr class="product">
                                 <td class="product__img-cell">
@@ -76,7 +76,7 @@ async function addProduct(evt) {
         console.log(evt.target);
 
 
-        const formFile = new FormData(evt.target);  //Clase 66 min 2:11:00
+        const formFile = new FormData(evt.target); 
         const obj = Object.fromEntries(formFile); //aca ya tengo el objeto ya armado
 
 

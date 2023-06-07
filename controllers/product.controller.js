@@ -32,7 +32,6 @@ async function addProduct(req, res) {
 
     try {
         const product = new Product(req.body)
-        // product.image = req.image.fileName    //clase 65 min 2:07:00
         await product.save()
         return responseCreator(res, 200, 'Producto agregado correctamente', {product})
 

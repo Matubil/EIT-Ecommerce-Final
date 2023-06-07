@@ -61,7 +61,6 @@ async function getUserById(req, res) {
     }
 }
 
-//!EDITAR FUNCION CON LA QUE TIENE EL PROFE
 async function getAllUsers(req, res) {
     try {
 
@@ -69,7 +68,7 @@ async function getAllUsers(req, res) {
 
         if (!users) return res.status(404).send({ msg: `No se encontraron usuarios` })
 
-        return responseCreator(res, 200, 'Usuarios obtenidos correctamente', { users: users }) //se pone esto asi para que cada vez que enviemos el users se cree el objeto users en la respuesta como nombre y reciba el valor, clase 62 min 25-29
+        return responseCreator(res, 200, 'Usuarios obtenidos correctamente', { users: users })
 
     } catch (error) {
         console.log(error);

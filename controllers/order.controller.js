@@ -25,7 +25,7 @@ async function getOrders(req, res) {
 
     try {
 
-        const orders = await Order.find().populate('userId', { fullname: 1, email: 1 }).populate('products.productId', { name: 1, description: 1, image: 1 }) // Clase 64, min 1:45:00 datos que me voy a traer del usuario
+        const orders = await Order.find().populate('userId', { fullname: 1, email: 1 }).populate('products.productId', { name: 1, description: 1, image: 1 }) //Datos que me voy a traer del usuario
 
         // console.log(fullName)
 
@@ -49,7 +49,7 @@ async function getOrdersById(req, res) {
 
         if (!id) return responseCreator(res, 404, "Error al obtener el Id")
 
-        const order = await Order.findById(id).populate('userId', { fullname: 1, email: 1 }).populate('products', { name: 1, description: 1, image: 1 }) // Clase 64, min 1:45:00 datos que me voy a traer del usuario
+        const order = await Order.findById(id).populate('userId', { fullname: 1, email: 1 }).populate('products', { name: 1, description: 1, image: 1 }) //Datos que me voy a traer del usuario
 
         if (!order) {
             return responseCreator(res, 404, 'No se pudo obtener la orden')
@@ -125,7 +125,7 @@ async function deleteOrder(req, res) {
 
         return responseCreator(res, 200, 'Orden borrado correctamente', { deleteOrder })
 
-    } catch (error) {   //clase 62 min 39 - 47 enseña como hacer funciones automatizadas, que vos escribas una palabra y te escriba algo que escribis muy seguido,//!- Snippet
+    } catch (error) {  
         console.log(error)
         responseCreator(res, 500, 'No se pudo eliminar la orden')
     }

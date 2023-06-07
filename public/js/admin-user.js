@@ -24,9 +24,7 @@ async function getUsers() {
             }
         });
 
-        console.log(respuesta)
         Users = respuesta.data.users
-        console.log(respuesta.data)
 
         renderizarTabla(Users)
 
@@ -47,9 +45,7 @@ async function getUser(id) {
             }
         });
 
-        console.log(respuesta)
         User = respuesta.data.users
-        console.log(respuesta.data)
 
         return User
 
@@ -114,15 +110,7 @@ async function addUser(evt) {
     try {
         evt.preventDefault(); //esto se pone porque la pagina se vive recargando, entonces se pone eso para que no se recargue la pagina
 
-        console.dir(evt.target); //puedo ver las cosas que trae por defecto ese evento
-        console.log(evt.target);
-        console.log(evt.target.elements.fullname.value);
-        console.log(evt.target.elements.password1.value);
-
         const elements = evt.target.elements
-
-
-        console.log(elements.fullname.value)
 
         const newUser = {
             fullname: elements.fullname.value.toLowerCase(),
@@ -138,9 +126,6 @@ async function addUser(evt) {
 
         const newFormData = new FormData(evt.target);
         const newUserFormData = Object.fromEntries(newFormData); //aca ya tengo el objeto ya armado
-        console.log(newFormData, "newFormData")
-        console.log(newUserFormData)
-        console.log(editIndex)
 
         if (editIndex) {
             const response = await axios.put(`${URL}/users/${editIndex}`, newUserFormData, {
@@ -169,9 +154,7 @@ async function addUser(evt) {
         submitBtn.innerText = 'Cargar usuario'
 
         getUsers()
-        // console.log(Users)
 
-        // renderizarTabla(Users)
 
         evt.target.reset() //resetea a la altura del form para que siga cargando
 
@@ -195,7 +178,6 @@ async function deleteUser(id) {
             });
 
             showAlert('El Usuario ha sido borrado correctamente.', 'success');
-            // showAlert(`El elemento "${userName}" borrado correctamente`, 'success')
 
             getUsers()
             return
@@ -224,15 +206,6 @@ async function editUser(id) {
 
         const user = response.data.user;
         const el = userForm.elements;
-
-        console.log(el)
-        console.log(id)
-        console.log(user)
-        console.log(el.email.value)
-        console.log(user.email)
-        console.log(user.role)
-        console.log(el.role.value)
-        // console.log(user.password)
 
         el.fullname.value = user.fullname
         el.email.value = user.email

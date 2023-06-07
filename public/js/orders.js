@@ -246,19 +246,11 @@ async function finalizarCompra() {
     console.log(valorTotal)
 
     orden.products = products,
-      orden.userId = currentUser._id,
-      orden.total = valorTotal;
+    orden.userId = currentUser._id,
+    orden.total = valorTotal;
     orden.createdAt = Date.now;
     orden.status = 'onhold';
     orden.updateAt = Date.now;
-
-    console.log(orden.products)
-    console.log(orden.userId)
-    console.log(orden.total)
-    console.log(orden.createdAt)
-    console.log(orden.status)
-    console.log(orden.updateAt)
-
 
     await axios.post(`${URL}/orders`, orden);
 

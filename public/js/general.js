@@ -1,13 +1,10 @@
 cardsContainer = document.getElementById('cards-container')
-// Products = JSON.parse(localStorage.getItem("Products"));
 
 async function cargarProductos(){
     try {
         const respuesta = await axios.get(`${URL}/products`)
 
-        console.log(respuesta)
         Products = respuesta.data.products
-        console.log(respuesta.data)
 
         renderizarCard(Products)
         
@@ -113,7 +110,6 @@ function addToCart(event, productId) {
 
     // Guardar el carrito actualizado en el localStorage
     sessionStorage.setItem("order", JSON.stringify(Order));
-    console.log(Order);
     window.location.replace("/order-detail");
 }
 
@@ -126,8 +122,6 @@ function deleteProduct(id) {
         Products.splice(id, 1);
 
         localStorage.setItem("Products", JSON.stringify(Products));
-
-        // showAlert(`Elemento borrado correctamente.`);
 
         showAlert(`El elemento "${productName}" borrado correctamente`, 'success')
 

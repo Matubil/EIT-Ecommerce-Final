@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', async (event) => {
         }
         const resp = await axios.post(`${URL}/login`, dataBody)
 
-        const { token, user, msg } = resp.data; //clase 63 min 1:40 empieza uso de axios
+        const { token, user, msg } = resp.data; 
 
 
         localStorage.setItem('token', token);

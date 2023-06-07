@@ -21,4 +21,4 @@ const productSchema = new Schema({
 
 //joy, express validator, son un par de middleware que lo que hace, es que si no viene el objeto bien cargado como deberia, lo que pasa es que no se va a ejecutar la funcion sin siquiera.
 
-module.exports = mongoose.model('Product', productSchema); //coleccion products clase 51 min 2:18:00 'Product' lo va a convertir en min y le va a poner en plural en mongoDb a la tabla, por eso se crea la tabla asi
+module.exports = mongoose.model('Product', productSchema); //coleccion products 'Product' lo va a convertir en min y le va a poner en plural en mongoDb a la tabla, por eso se crea la tabla asi

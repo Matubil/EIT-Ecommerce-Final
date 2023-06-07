@@ -1,21 +1,15 @@
 const registerForm = document.querySelector('#register');
-console.log(registerForm)
 const registerBtn = document.getElementById('registerSubmit');
 
 registerForm.addEventListener('submit', async (event) => {
     try {
-        console.log('Submit event')
         event.preventDefault();
         const el = event.target.elements
-        console.log(el)
 
         if (el.password1.value !== el.password2.value) {
             showAlert(`El password no coincide`, 'warning')
             return
         }
-
-        console.log(el.age.value, "elemento age valor") 
-        console.log(el.date.value, "elemento age") 
 
         const user = {
             fullname: el.name.value.toLowerCase(),
@@ -24,12 +18,11 @@ registerForm.addEventListener('submit', async (event) => {
             age: el.age.value,
             date: el.date.value
         }
-        console.log(user.age, "user age") 
+
         try {
             const response = await axios.post(`${URL}/users`, user);
             Users = response.data.user;
     
-            console.log(Users)
             showAlert('El usuario se registro correctamente', 'success')
     
             setTimeout(() => {
