@@ -13,22 +13,22 @@
             <form id="add-product" class="user-form" onsubmit="addUser(event)"> 
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="nameLabel">Nombre Completo</label>
-                    <input class="input-user-box__input" type="text" name="fullname" id="nameLabel" value="prueba" required>
+                    <input class="input-user-box__input" type="text" name="fullname" id="nameLabel"  required>
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="emailLabel">Email</label>
-                    <input class="input-user-box__input" type="email" name="email" id="emailLabel"  value="pruebita@gmail.com" required>
+                    <input class="input-user-box__input" type="email" name="email" id="emailLabel"  required>
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="password1" >Contraseña</label>
-                    <input type="password" name="password1" id="password1" value="123456789" class="input-user-box__input" 
-                    
+                    <input type="password" name="password1" id="password1" class="input-user-box__input" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     min=3 max=30 required>
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="password2" >Repetir Contraseña</label>
                     <input class="input-user-box__input" type="password" name="password2" id="password2"  
-                    class="admin-user-form__form-input" value="123456789"
+                    class="admin-user-form__form-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     min=3 max=30  required>
                 </div>   
                 <div class="user-form__container input-user-box">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="age">Edad</label>
-                    <input class="input-user-box__input" type="number" name="age" id="age" value="26" min="12" max="120" required>
+                    <input class="input-user-box__input" type="number" name="age" id="age" min="12" max="120" required>
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="rolLabel">Rol</label>
