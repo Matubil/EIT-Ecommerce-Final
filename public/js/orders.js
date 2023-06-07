@@ -268,6 +268,8 @@ async function finalizarCompra() {
       Order = []; // Vacía el carrito
       renderOrder(); // Renderizar la orden antes de eliminar el contenido del carrito
       showAlert('Compra Finalizada', 'exito');
+      window.location.replace("/order-detail");
+
     }
 
   } catch (error) {
