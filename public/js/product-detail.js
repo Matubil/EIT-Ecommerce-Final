@@ -23,12 +23,6 @@ async function obtenerProductos() {
     }
 }
 
-// let product;
-
-// const product = products[id]
-
-// console.log(product)
-
 
 async function renderizarDetail() {
     mainDetail.innerHTML = '';

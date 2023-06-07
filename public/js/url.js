@@ -1,1 +1,1 @@
-const URL = 'http://localhost:8000/api'
+const URL = 'https://vikings-technology-ecommerce-eit.onrender.com/'

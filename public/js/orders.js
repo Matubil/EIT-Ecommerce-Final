@@ -121,13 +121,10 @@ async function increaseQuantity(event, index) {
   productoEncontrado.total = Math.round(cant * productoEncontrado.price * 100) / 100;
   cantInput.value = cant;
   // console.log(cant)
-  // Aca se actualiza el valor de la cantidad en el sessionStorage
   const productosEnCarrito = JSON.parse(sessionStorage.getItem('order'));
   const productoEnCarrito = productosEnCarrito.find(producto => producto.name === productoEncontrado.name);
   if (productoEnCarrito) {
-    // console.log(productoEnCarrito.quantity)
     productoEnCarrito.quantity = cant;
-    // console.log(productoEnCarrito.quantity)
 
     sessionStorage.setItem('order', JSON.stringify(productosEnCarrito));
   }

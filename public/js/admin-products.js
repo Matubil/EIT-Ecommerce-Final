@@ -61,10 +61,7 @@ function renderizarTabla(arrayProducts) {
                             </tr>`
         tableBody.innerHTML += tableRow
 
-        // !-- Intentar implementar favoritos
-        /*<button class="product__action-btn btn-favorite ${producto.favorite ? 'active' : ''}" onclick="setFavoriteProduct(${index})">
-                <i class="fa-regular fa-star"></i>
-            </button>    */
+
     })
 }
 
@@ -80,13 +77,9 @@ async function addProduct(evt) {
 
 
         const formFile = new FormData(evt.target);  //Clase 66 min 2:11:00
-        // TODO: remover Observar que tengo
         const obj = Object.fromEntries(formFile); //aca ya tengo el objeto ya armado
-        console.log(obj)
 
-        // obj.price = +obj.price; //lo convierte en int
-        // //! SI QUIERO PROBAR SI ANDA SIN TENER QUE MANDAR TOKEN ES LA LINEA COMENTADA DE ABAJO    
-        // // const {data} = await axios.post(`${URL}/upload`, formFile
+
         if (editIndex) {
             const response = await axios.put(`${URL}/product/${editIndex}`, obj, {
                 headers: {
@@ -130,7 +123,6 @@ async function addProduct(evt) {
 
 async function deleteProduct(id) {
     try {
-        // if (confirm(`¿Está seguro que desea borrar el producto ${productName}?`)) {
         if (confirm(`¿Está seguro que desea borrar el producto?`)) {
 
             const token = localStorage.getItem('token');
@@ -145,9 +137,6 @@ async function deleteProduct(id) {
             showAlert(`El elemento ha sido borrado correctamente`, 'success')
 
             cargarProductos()
-            //aunque creo que deberia de obtener los productos que quedaron y ahi renderizar tabla mandandole una constante productos
-
-            // showAlert(`Elemento borrado correctamente.`);
             return
         } else {
             showAlert(`Error al borrar el producto`, 'error');
@@ -188,12 +177,10 @@ async function editProduct(id) {
         el.price.value = product.price
         console.log(product.image)
         console.log(el.image)
-        // el.image.value = product.image
 
         console.log('estamos dentro de editar')
 
         editIndex = id; //esta declarado arriba de renderizarTabla y se hace para que podamos traernos el id del que estamos editando para mas tarde que se termine de modificar
-        //** VAMOS A MANDAR EL OBJETO AL BACKEND AL ENDPOINT DE HACER PUT, UNA VEZ RESUELTO EL LLAMADO, VOLVEMOS A PEDIR LOS PRODUCTOS */
     } catch (error) {
         console.log(error);
     }

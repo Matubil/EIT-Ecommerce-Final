@@ -1,38 +1,17 @@
-const multer = require('multer')    //clase 65 min 1:11:00
+const multer = require('multer')    
 const fs = require('fs')    //File storage de node
-const { v4: uuidv4 } = require('uuid') // clase 65 min 1:48:00
+const { v4: uuidv4 } = require('uuid') 
 const Product = require('../schemas/product.schema')
 
-// const checkImageExist = async(req,res)=>{ //Clase 67 min11  esto podria ir como un middleware
-//     if(req.body.image){
-//         const id = req.params.id
-//         const product = Product.findById(id, {image})
-//         if(req.body.image !== product.image){
-//             return res.status(400).send('Error')
-//         }
-//         else{
-//             req.body.image
-//         }
-//     }
-// }
 
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         callback(null, 'public/upload/product')
     },
     filename: (req, file, callback) => {
-        console.log(file.originalname, "LINEA24")
-        const fileExt = file.originalname.split('.').at(-1); //extension del archivo clase 65 min 1:34:00
-
-        console.log(fileExt, "LINEA27")
-
-        // const fileNAme = req.body.image
+        const fileExt = file.originalname.split('.').at(-1); //extension del archivo
 
         const fileName = `${uuidv4()}.${fileExt}`
-        console.log(fileName, " + LINEA13")
-
-        // if(!req.body.image){
-        // }
 
         req.body.image = fileName
 
@@ -45,7 +24,7 @@ const uploadMulter = multer({
     limits: { fileSize: 1024 * 1024 * 10 }, //lo limitas aca a 10 mb, porque multiplicas bytes, kb y mb
     fileFilter: (req, file, callback) => {    //filtras el tipo de archivo
         const type = file.mimetype.split('/')[0]
-        type === 'image' ? callback(null, true) : callback(null, false) //clase65 min 1:43:00
+        type === 'image' ? callback(null, true) : callback(null, false) 
     }
 })
 
@@ -86,7 +65,6 @@ async function getImages(req, res) {
 }
 
 module.exports = {
-    // checkImageExist,
     uploadProduct,
     uploadFile,
     getImage,

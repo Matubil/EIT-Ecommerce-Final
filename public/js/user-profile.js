@@ -37,17 +37,10 @@ function formatDate(fechaMongoDB) {
 
 nameInput.value = user.fullname; // Reemplaza "name" con la propiedad correspondiente en el objeto del usuario
 emailInput.value = user.email; // Reemplaza "email" con la propiedad correspondiente en el objeto del usuario
-// password1Input.value = user.password; // Reemplaza "password" con la propiedad correspondiente en el objeto del usuario
-// password2Input.value = user.password; // Reemplaza "password" con la propiedad correspondiente en el objeto del usuario
 ageInput.value = user.age; // Reemplaza "age" con la propiedad correspondiente en el objeto del usuario
 dateInput.value = formatDate(user.date); // Reemplaza "dateOfBirth" con la propiedad correspondiente en el objeto del usuario
 
 
-// async function renderizarBtn(id){
-//     btnChangePassword.innerHTML = `<button class="product__action-btn btn-edit" id="btn-change-password" onclick="editPass(${id})">Cambiar Contraseña</button>`    
-// }
-
-// renderizarBtn(user._id)
 
 async function getAllOrders(){
     try {
@@ -167,21 +160,13 @@ async function renderizarTabla(Orders){
 
 async function deleteOrder(id) {
     try {
-        // if (confirm(`¿Está seguro que desea borrar el producto ${productName}?`)) {
         if (confirm(`¿Está seguro que desea borrar el producto?`)) {
-            // console.log(id)
-            // const token = localStorage.getItem('token');
-            //borrar usuario
             response = await axios.delete(`${URL}/orders/${id}`);
 
-            // showAlert(`El elemento "${productName}" borrado correctamente`, 'success')
             showAlert(`La orden ha sido borrado correctamente`, 'success')
 
             getAllOrders()
 
-            //aunque creo que deberia de obtener los productos que quedaron y ahi renderizar tabla mandandole una constante productos
-
-            // showAlert(`Elemento borrado correctamente.`);
             return
         } else {
             showAlert(`Error al borrar la orden`, 'error');
@@ -203,19 +188,12 @@ async function editOrder(id){
                 showAlert(`El password no coincide`, 'warning')
                 return
             }
-            // console.log(id)
-            // const token = localStorage.getItem('token');
-            //borrar usuario
             response = await axios.put(`${URL}/users/${id}/${password1}`);
 
-            // showAlert(`El elemento "${productName}" borrado correctamente`, 'success')
             showAlert(`El usuario ha sido actualizado correctamente`, 'success')
 
             getAllOrders()
 
-            //aunque creo que deberia de obtener los productos que quedaron y ahi renderizar tabla mandandole una constante productos
-
-            // showAlert(`Elemento borrado correctamente.`);
             return
         } else {
             showAlert(`Error al editar el usuario`, 'error');

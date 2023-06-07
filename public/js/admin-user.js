@@ -132,10 +132,6 @@ async function addUser(evt) {
             password: elements.password1.value,
             age: elements.age.value
         };
-        // console.log(elements.email.value)
-        // console.log(elements.name.value)
-        // console.log(elements.role.value)
-        // console.log(elements.password.value)
 
         const token = localStorage.getItem('token');
 
@@ -185,17 +181,6 @@ async function addUser(evt) {
     }
 }
 
-
-// try {
-//     const dataBody = {
-//         email: email.value,
-//         password: password.value
-//     }
-//     const resp = await axios.post(`${URL}/login`, dataBody)
-
-//     const { token, user, msg } = resp.data; //clase 63 min 1:40 empieza uso de axios
-
-// getUser('64726d21956515bcbe654015')
 
 
 async function deleteUser(id) {
@@ -258,7 +243,7 @@ async function editUser(id) {
         el.date.value = formatDate(user.date);
 
 
-        editIndex = id; //esta declarado arriba de renderizarTabla y se hace para que podamos traernos el id del que estamos editando para mas tarde que se termine de modificar
+        editIndex = id; 
     } catch (error) {
 
     }
