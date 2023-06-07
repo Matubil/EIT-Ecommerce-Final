@@ -25,12 +25,12 @@
     
                 <div class="password-container form-container">
                     <label class="password-container__label"  for="password1">Contraseña</label>
-                    <input class="password-container__input input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}  type="password" name="password1" id="password1"  minlength="8" maxlength="20" required>
+                    <input class="password-container__input input" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$"  type="password" name="password1" id="password1"  minlength="8" maxlength="20" required>
                 </div>
     
                 <div class="reply-password-container form-container">
                     <label class="reply-password-container__label"  for="password2">Repetir Contraseña</label>
-                    <input class="reply-password-container__input input"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} type="password" name="password2" id="password2"  minlength="8" maxlength="20" required>
+                    <input class="reply-password-container__input input"  pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$" type="password" name="password2" id="password2"  minlength="8" maxlength="20" required>
                 </div>
     
                 <div class="age-container form-container">

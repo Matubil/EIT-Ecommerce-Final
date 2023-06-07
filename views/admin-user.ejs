@@ -22,13 +22,13 @@
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="password1" >Contraseña</label>
                     <input type="password" name="password1" id="password1" class="input-user-box__input" 
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$"
                     min=3 max=30 required>
                 </div>
                 <div class="user-form__container input-user-box">
                     <label class="input-user-box__label" for="password2" >Repetir Contraseña</label>
                     <input class="input-user-box__input" type="password" name="password2" id="password2"  
-                    class="admin-user-form__form-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    class="admin-user-form__form-input" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$"
                     min=3 max=30  required>
                 </div>   
                 <div class="user-form__container input-user-box">
