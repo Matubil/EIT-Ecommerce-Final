@@ -1,1 +1,1 @@
-const URL = 'https://vikings-technology-ecommerce-eit.onrender.com/'
+const URL = 'https://vikings-technology-ecommerce-eit.onrender.com/api'
